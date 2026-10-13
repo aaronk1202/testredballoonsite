@@ -28,6 +28,59 @@
   </div>
 </section>
 
+<section class="featured-project-section section">
+  <div class="container">
+    <div class="featured-project-heading">
+      <span class="project-eyebrow">Recent project</span>
+      <h2>Replacing a 300kg+ walk-on glass floor tile</h2>
+      <p>A specialist glass floor replacement at one of our Central London sites.</p>
+    </div>
+    <article class="featured-project-card">
+      <div class="project-gallery" aria-label="Featured project photo gallery">
+        <div class="project-placeholder active" data-slide="0">
+          <span class="placeholder-kicker">Project gallery</span>
+          <div class="glass-tile-illustration" aria-hidden="true"><div class="glass-tile-inner"></div></div>
+          <strong>Walk-on glass floor tile</strong>
+          <small>Project photograph placeholder</small>
+        </div>
+        <div class="project-placeholder" data-slide="1">
+          <span class="placeholder-kicker">Project gallery</span>
+          <div class="lift-illustration" aria-hidden="true"><span></span><i></i></div>
+          <strong>Specialist suction-lift removal</strong>
+          <small>Project photograph placeholder</small>
+        </div>
+        <div class="project-placeholder" data-slide="2">
+          <span class="placeholder-kicker">Project gallery</span>
+          <div class="pattern-illustration" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          <strong>Matching geometric sandblasted finish</strong>
+          <small>Project photograph placeholder</small>
+        </div>
+        <div class="gallery-controls">
+          <button type="button" class="gallery-arrow gallery-prev" aria-label="Previous project photo">‹</button>
+          <div class="gallery-dots" aria-label="Choose project photo">
+            <button class="gallery-dot active" type="button" aria-label="Show photo 1"></button>
+            <button class="gallery-dot" type="button" aria-label="Show photo 2"></button>
+            <button class="gallery-dot" type="button" aria-label="Show photo 3"></button>
+          </div>
+          <button type="button" class="gallery-arrow gallery-next" aria-label="Next project photo">›</button>
+        </div>
+      </div>
+      <div class="featured-project-copy">
+        <span class="project-category">Specialist commercial works · Central London</span>
+        <h3>A made-to-measure glass floor replacement</h3>
+        <p>Following a cracked floor tile at one of our Central London sites, Red Balloon Construction coordinated with specialist partners to produce a new walk-on glass tile with a matching geometric sandblasted finish.</p>
+        <p>The existing tile was carefully removed using specialist suction-lifting equipment before the new tile was installed. Weighing over 300kg, the replacement required careful planning, coordination and handling throughout the operation.</p>
+        <div class="project-highlights">
+          <div><span class="highlight-mark">✓</span><span><strong>Specialist coordination</strong><small>Working with partners to produce the replacement tile</small></span></div>
+          <div><span class="highlight-mark">✓</span><span><strong>Careful removal and installation</strong><small>Specialist suction-lifting equipment used</small></span></div>
+        </div>
+        <a class="btn btn-primary project-contact-btn" href="contact.html">Discuss a project like this</a>
+      </div>
+    </article>
+    <p class="project-gallery-note">Gallery preview — project photographs can be added here when available.</p>
+  </div>
+</section>
+
 <section class="values-strip"><div class="container"><div class="values-grid">
 <div class="value-item"><div class="value-icon">👥</div><div><h3>Multi-Discipline Experts</h3><p>Skilled across a broad range of commercial construction trades.</p></div></div>
 <div class="value-item"><div class="value-icon">🛡</div><div><h3>Quality &amp; Safety First</h3><p>Committed to high standards, safe methods and dependable delivery.</p></div></div>
@@ -104,4 +157,28 @@ document.querySelectorAll('.flip-card').forEach(card=>{card.setAttribute('tabind
   <!-- v28 rebuilt full update trigger -->
   <!-- v29 van fill update trigger -->
   <!-- v30 one hero box update trigger -->
+
+<script>
+(() => {
+  const gallery = document.querySelector('.project-gallery');
+  if (!gallery) return;
+  const slides = [...gallery.querySelectorAll('.project-placeholder')];
+  const dots = [...gallery.querySelectorAll('.gallery-dot')];
+  let current = 0;
+  let timer;
+  const show = (index) => {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === current));
+  };
+  const restart = () => { clearInterval(timer); timer = setInterval(() => show(current + 1), 4500); };
+  gallery.querySelector('.gallery-prev').addEventListener('click', () => { show(current - 1); restart(); });
+  gallery.querySelector('.gallery-next').addEventListener('click', () => { show(current + 1); restart(); });
+  dots.forEach((dot, i) => dot.addEventListener('click', () => { show(i); restart(); }));
+  gallery.addEventListener('mouseenter', () => clearInterval(timer));
+  gallery.addEventListener('mouseleave', restart);
+  restart();
+})();
+</script>
+
 </body></html>
