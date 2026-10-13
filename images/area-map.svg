@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+<title id="title">Red Balloon Construction working area map</title>
+<desc id="desc">Stylised working area map highlighting Kent to London.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0%" stop-color="#ffffff"/>
+    <stop offset="100%" stop-color="#f2f3f6"/>
+  </linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#1f2430" flood-opacity="0.14"/>
+  </filter>
+</defs>
+<rect width="900" height="520" rx="34" fill="url(#bg)"/>
+<g opacity="0.38" stroke="#cfd3da" stroke-width="2">
+  <path d="M90 105 C240 130 330 80 470 120 S720 115 815 82"/>
+  <path d="M70 210 C210 230 290 185 430 215 S680 220 830 178"/>
+  <path d="M95 330 C235 300 340 340 470 310 S695 310 820 355"/>
+  <path d="M180 55 C165 145 205 235 185 330 S225 445 200 480"/>
+  <path d="M380 50 C360 160 405 240 385 335 S430 430 405 485"/>
+  <path d="M610 55 C580 145 625 250 600 345 S635 430 625 478"/>
+</g>
+<g filter="url(#shadow)">
+  <path d="M220 190 C280 120 390 115 470 150 C560 188 615 140 690 185 C760 225 770 330 710 382 C650 438 520 425 435 390 C350 354 255 395 205 335 C160 282 174 238 220 190 Z" fill="#ffffff"/>
+  <path d="M246 202 C300 148 387 146 462 176 C548 211 594 165 672 203 C724 229 736 313 685 356 C628 406 526 395 448 365 C368 334 278 365 236 317 C200 274 207 239 246 202 Z" fill="#fff7f6"/>
+  <path d="M246 202 C300 148 387 146 462 176 C548 211 594 165 672 203 C724 229 736 313 685 356 C628 406 526 395 448 365 C368 334 278 365 236 317 C200 274 207 239 246 202 Z" fill="none" stroke="#d64035" stroke-width="7" stroke-linejoin="round"/>
+</g>
+<circle cx="360" cy="230" r="12" fill="#d64035"/>
+<circle cx="570" cy="285" r="12" fill="#d64035"/>
+<path d="M360 230 C430 190 520 225 570 285" fill="none" stroke="#d64035" stroke-width="4" stroke-dasharray="10 10" stroke-linecap="round"/>
+<g font-family="Arial, Helvetica, sans-serif">
+  <text x="322" y="210" font-size="34" fill="#1f2430" font-weight="700">London</text>
+  <text x="588" y="302" font-size="34" fill="#1f2430" font-weight="700">Kent</text>
+  <text x="86" y="445" font-size="28" fill="#d64035" font-weight="700">Working area</text>
+  <text x="86" y="480" font-size="24" fill="#66707c">Kent • Greater London • surrounding areas</text>
+</g>
+</svg>

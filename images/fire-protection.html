@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Passive Fire Protection & Fire Stopping the South East and Greater London | Red Balloon Construction</title><link rel="stylesheet" href="styles.css">  <meta name="description" content="Passive fire protection, fire stopping, fire damper support, fire door works and compliance-led services across the South East and Greater London.">
+  <meta name="keywords" content="passive fire protection Kent, fire stopping London, fire doors Kent, fire dampers London">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+</head><body>
+<header class="site-header"><div class="container header-wrap"><a href="index.html" class="brand"><img src="images/Headed Logo.png" alt="Red Balloon Construction logo"></a><button class="mobile-menu-toggle" type="button" aria-label="Toggle menu">Menu ☰</button><nav class="nav"><a href="index.html" class="">Home</a><a href="about.html" class="">About Us</a><a href="construction.html" class="">Construction</a><a href="fire-protection.html" class="active">Fire Protection</a><a href="contact.html" class="">Contact Us</a></nav></div></header>
+
+<main><section class="page-intro"><div class="container"><h1>Passive Fire Protection Services</h1><p>BM Trada approved, with Hasman and Envirograf certification supporting fire damper servicing, fire door support and passive fire protection works.</p></div></section><section class="section" style="padding-top:10px"><div class="container"><div class="two-col"><div class="gallery-card"><div class="gallery-main"><img src="images/Cable FS.png"></div><div class="thumb-grid"><img src="images/Cable FS 1.png"><img src="images/Damper.jpg"><img src="images/Damper1.jpg"><img src="images/Door.png"></div></div><div class="content-card" style="padding:18px"><div class="flip-grid">
+<div class="flip-card"><div class="flip-inner"><div class="flip-face flip-front flip-red" style="--box-image:url('images/Cable FS 1.png')"><h3>Fire Stopping Solutions</h3><p>Compartmentation, penetrations and service sealing.</p><small>Click for more</small></div><div class="flip-face flip-back flip-red" style="--box-image:url('images/Cable FS 1.png')"><h3>Fire Stopping Solutions</h3><ul><li>Fire sealing around service penetrations, walls, ceilings and floors</li><li>Compartmentation and penetration sealing using approved systems</li><li>Fire stopping following renovation and refurbishment works</li></ul></div></div></div>
+<div class="flip-card"><div class="flip-inner"><div class="flip-face flip-front flip-red" style="--box-image:url('images/Damper.jpg')"><h3>Fire Damper Testing &amp; Reporting</h3><p>Inspection, testing, records and remedial support.</p><small>Click for more</small></div><div class="flip-face flip-back flip-red" style="--box-image:url('images/Damper.jpg')"><h3>Fire Damper Testing &amp; Reporting</h3><ul><li>Inspection, testing and certification support</li><li>Comprehensive photographic and written reports</li><li>Prompt completion of remedial works and re-certification support</li></ul></div></div></div>
+<div class="flip-card"><div class="flip-inner"><div class="flip-face flip-front flip-red" style="--box-image:url('images/Partiain wall FS.png')"><h3>Partition &amp; Passive Fire Repairs</h3><p>Fire-rated partition and cavity barrier remedials.</p><small>Click for more</small></div><div class="flip-face flip-back flip-red" style="--box-image:url('images/Partiain wall FS.png')"><h3>Partition &amp; Passive Fire Repairs</h3><ul><li>Fire-rated partition and cavity barrier repairs</li><li>Rectification of damaged or non-compliant installations</li><li>Coordination with renovation and maintenance schedules</li></ul></div></div></div>
+<div class="flip-card"><div class="flip-inner"><div class="flip-face flip-front flip-red" style="--box-image:url('images/Door.png')"><h3>Fire Door &amp; Frame Works</h3><p>Fire door, frame, upgrade and certification support.</p><small>Click for more</small></div><div class="flip-face flip-back flip-red" style="--box-image:url('images/Door.png')"><h3>Fire Door &amp; Frame Works</h3><ul><li>Repair and replacement of fire rated doors and frames</li><li>Upgrades to meet required rating and performance standards</li><li>Third-party certification support for fire doors</li></ul></div></div></div>
+</div>
+<p class="bottom-note">Works carried out with a focus on traceability, compliance and a clear professional finish.</p></div></div></div></section><section class="logo-section"><div class="container"><div class="logo-band">
+<img src="images/CHAS.webp" alt="CHAS accreditation logo">
+<img src="images/Safe contractor.webp" alt="SafeContractor logo">
+<img class="bm-logo" src="images/BM trada.jpg" alt="BM Trada logo">
+<img src="images/IPAF-logo-1.jpg" alt="IPAF logo">
+<img src="images/hasman-equipment.webp" alt="Hasman logo">
+<img src="images/Envirograf_Logo.jpg.png" alt="Envirograf logo">
+</div></div></section></main>
+<footer class="site-footer"><div class="container footer-wrap"><div>© 2026 Red Balloon Construction. All rights reserved.</div><div>Commercial construction and passive fire protection across the South East and Greater London.</div></div></footer>
+
+<div class="quick-links" aria-label="Quick contact links">
+  <a href="contact.html" title="Request a quote">✉</a>
+  
+</div>
+
+<script>
+  const revealItems = document.querySelectorAll('.reveal, .tile, .value-item, .service-box, .about-card, .contact-card, .logo-band');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('is-visible');
+    });
+  }, { threshold: 0.12 });
+  revealItems.forEach(item => {
+    item.classList.add('reveal');
+    observer.observe(item);
+  });
+
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
+      const isOpen = item.classList.contains('open');
+
+      document.querySelectorAll('.faq-item.open').forEach(openItem => {
+        openItem.classList.remove('open');
+        openItem.querySelector('.faq-answer').style.maxHeight = null;
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+
+<script>
+document.querySelectorAll('.mobile-menu-toggle').forEach(button=>{button.addEventListener('click',()=>{button.parentElement.querySelector('.nav').classList.toggle('open')})});
+document.querySelectorAll('.flip-card').forEach(card=>{card.setAttribute('tabindex','0');card.addEventListener('click',()=>card.classList.toggle('flipped'));card.addEventListener('keypress',e=>{if(e.key==='Enter'||e.key===' ')card.classList.toggle('flipped')})});
+</script>
+
+</body></html>
